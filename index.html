@@ -21,32 +21,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
-<style>
+
+    <title>Fruit Burst</title>
+  </head>
+
+  <style>
     .font-Lato {
         font-family: 'Lato', sans-serif;
     }
 </style>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            backgroundImage: {
-              "hero-bg": "url('./images/yellow-bg.jpg')",
-            },
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            "back_image": "url('./images/banner3.png')",
           },
         },
-      };
-    </script>
-    <title>Fruit Burst</title>
-  </head>
+      },
+    };
+  </script>
   <body class="font-Lato">
     <!-- header Section -->
-    <header class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-5 my-10">
+    <header class="max-w- mx-auto px-8 md:px-16 lg:px-24 py-5 my-10">
       <!-- nav Bar -->
       <div
-        style="border-radius: 600px"
-        class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 dark:bg-[#F85559]"
-      >
+        style="border-radius: 100px"
+        class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 dark:bg-[#F85559] mb-14">
         <div class="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
           <ul class="flex items-center hidden space-x-8 lg:flex">
             <li>
@@ -191,6 +192,54 @@
           </div>
         </div>
       </div>
+      <!-- banner section -->
+      <div class="hero min-h-[calc(100vh-100px)] bg-back_image rounded-lg">
+        <div class="hero-overlay bg-opacity-60 rounded-lg"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-white text-center text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
+            <p class="mb-5 text-white text-xl font-medium">We supply highly quality organic products</p>
+            <button class="btn btn-secondary text-white rounded-lg bg-[#F85559] border-none">Shop Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fruit Bucket section -->
+
+      <div class="hidden bg-white lg:flex lg:justify-around gap-8 w-fit relative -top-28 mx-auto z-2 rounded-lg px-8 py-4">
+        <div>
+            <div class="w-[122px] h-[122px] flex items-center justify-center">
+                <img class="w-full"   src="./images/fruit1.png" alt="">
+            </div>
+            <p class="text-black text-sm font-medium text-center mt-4">Grave</p>
+        </div>
+        <div>
+           <div class="w-[122px] h-[122px] flex items-center justify-center">
+                <img class="w-full"  src="./images/fruit2.png" alt="">
+           </div>
+            <p class="text-black text-sm font-medium text-center mt-4">Orange</p>
+        </div>
+        <div>
+            <div class="w-[122px] h-[122px] flex items-center justify-center">
+                <img class="w-full"  src="./images/fruit3.png" alt="">
+            </div>
+            <p class="text-black text-sm font-medium text-center mt-4">Mango</p>
+        </div>
+        <div>
+            <div class="w-[122px] h-[122px] flex items-center justify-center">
+                <img class="w-full"  src="./images/fruit4.png" alt="">
+            </div>
+            <p class="text-black text-sm font-medium text-center mt-4">Strawberry</p>
+        </div>
+        <div>
+            <div class="w-[122px] h-[122px] flex items-center justify-center">
+                <img class="w-full" src="./images/fruit5.png" alt="">
+            </div>
+            <p class="text-black text-sm font-medium text-center mt-4">Pomegranate</p>
+        </div>
+        
+      </div>
+
     </header>
   </body>
 </html>
