@@ -75,11 +75,11 @@
         <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
           <li>
             <div class="relative flex items-center">
-              <i
-                class="fa-solid fa-magnifying-glass absolute inset-y-0 left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+              <i class="fa-solid fa-magnifying-glass absolute inset-y-0 left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+                id="s-btn"></i>
               <input type="text" style="border-radius: 50px;"
                 class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-lg dark:bg-white dark:text-gray-300 dark:border-white focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
-                placeholder="Search" />
+                placeholder="Search" id="search-field" />
             </div>
 
           </li>
@@ -161,7 +161,8 @@
         <div class="max-w-screen-xlmd">
           <h1 class="mb-5 text-white text-center text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
           <p class="mb-5 text-white text-xl font-medium">We supply highly quality organic products</p>
-          <button class="btn btn-secondary text-white rounded-lg bg-[#F85559] border-none">Shop Now</button>
+          <button class="btn btn-secondary text-white rounded-lg bg-[#F85559] border-none" id="make-color">Shop
+            Now</button>
         </div>
       </div>
     </div>
@@ -208,8 +209,8 @@
     <!-- deal section -->
     <section class="mx-[7%] py-5 my-10">
       <div class="lg:flex">
-        <div class="justify-center flex-1 ">
-          <h1 class="text-5xl text-center font-extrabold text-[#121212] lg:text-left">Deal of the day</h1>
+        <div class="justify-center flex-1 change ">
+          <h1 class="text-5xl text-center font-extrabold text-[#121212] lg:text-left" id="x">Deal of the day</h1>
           <p class="font-medium text-[#212121] mt-4">Contrary to popular belief, is not simply random text. It has roots
             in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
         </div>
@@ -349,7 +350,7 @@
           <div class="card-body text-center">
             <p class="text-[#121212] text-2xl font-bold">12.90$ - 18.85$</p>
             <p class=" mt-1 border-b border-[#0C0C0C1A]"></p>
-            <h2 class="text-base font-medium text-[#0C0C0C99]">Apple</h2>
+            <h2 class="text-base font-medium text-[#0C0C0C99]" id="modal-text">Apple</h2>
             <p class="text-[#0C0C0C99]">Professional employees are there for you to pick <br> the most amazing and fresh
               fruits.</p>
             <p class="text-[#F85559]">
@@ -608,7 +609,44 @@
 
 
 
+  <script>
 
+    // color change
+    document.getElementById("make-color").addEventListener("click", function () {
+      document.body.style.backgroundColor = "gray";
+    })
+
+    document.getElementById("make-color").addEventListener("dblclick", function () {
+      document.body.style.backgroundColor = "white"
+    })
+
+    // search product
+
+
+    document.getElementById("s-btn").addEventListener("click", function () {
+      const search_field = document.getElementById("search-field");
+      const search_text = search_field.value;
+      const modal_text = document.getElementById("modal-text");
+      modal_text.innerText = search_text;
+      // modalText.innerText. "Bold and Black";
+      modal_text.style.fontSize = "30px";
+      modal_text.style.color = "Black";
+      modal_text.style.fontWeight = "Bold";
+      my_modal_1.showModal();
+      search_field.value = "";
+
+      // call_modal()
+      // console.log(search_field.value);
+    })
+
+
+
+
+
+
+
+
+  </script>
 
 </body>
 
